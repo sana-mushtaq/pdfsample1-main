@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3D PDF Flipbook Sample</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Include jQuery and FlipBook CSS/JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+    <script src="js/flipbook.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style type="text/css">
+        body {
+            text-align: center;
+            font-family: "Henry Sans", sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #0030ff;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .flipbook-container {
+            margin: 20px auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>3D PDF Flipbook Sample</h1>
+    <p>Opening a specific PDF directly.</p>
+
+    <!-- Container for the FlipBook -->
+    <div class="flipbook-container">
+        <img id="container" width="360" src="images/book2/thumb1.jpg" />
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Initialize the FlipBook with the specific PDF
+            $("#container").flipBook({
+                pdfUrl: "pdf/pdf.pdf",
+                skin: "dark",
+                icons: 'material',
+                backgroundColor: "#ddd",
+                pageRoughness: 0.5,
+                lightIntensity: 0.4,
+                lightPositionY: 400,
+                shadowOpacity: 0.5,
+                zoomMin: 0.8,
+                lightBox: false
+            });
+        });
+    </script>
+
+</body>
+
+</html>

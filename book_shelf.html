@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+<script src="js/flipbook.min.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        
+        $(".book-1").flipBook({
+            pdfUrl:"pdf/pdf.pdf",
+            lightBox:true
+        });
+
+        $(".book-2").flipBook({
+            pdfUrl:"pdf/pdf.pdf",
+            lightBox:true
+        });
+
+      
+
+    })
+</script>
+
+<style type="text/css">
+    .bookshelf .thumb{
+        display: inline-block;
+        cursor: pointer; 
+        margin: 0px 0.5%; 
+        width: 15% !important; 
+        box-shadow:0px 1px 3px rgba(0,0,0,.3);
+        max-width:100px;
+    }
+    .bookshelf .thumb img{
+        width:100%; 
+        display:block; 
+        vertical-align:top;
+    }
+    .bookshelf .shelf-img{
+        z-index:0; 
+        height: auto; 
+        max-width: 100%; 
+        vertical-align: top; 
+        margin-top:-12px; 
+    }
+    .bookshelf .covers{
+        width:100%; 
+        height:auto; 
+        z-index: 99; 
+        position: relative;
+        text-align:center;
+    }
+    .bookshelf{
+        text-align: center;
+        padding:0px;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <div class="bookshelf">
+        <div class="covers">
+            <div class="thumb book-1"><img src="images/book2/thumb1.jpg"></div>
+            <div class="thumb book-2"><img src="images/book2/thumb2.jpg"></div>
+        </div>
+        <img class="shelf-img" src="images/shelf_glass.png">
+    </div>
+
+   
+
+</body>
+
+</html>
