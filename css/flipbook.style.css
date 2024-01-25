@@ -427,6 +427,7 @@
 }
 
 .flipbook-currentPageNumber {
+    display: none;
     /* font-weight: bold !important; */
     border-radius: 15px !important;
     /*     color: rgba(255, 255, 255, 0.72); */
@@ -450,6 +451,7 @@
 }*/
 
 .flipbook-currentPageInput {
+    display: none;
     padding: initial !important;
     position: absolute !important;
     line-height: 14px !important;
@@ -959,7 +961,7 @@
 /*dark*/
 
 .flipbook-bg-dark {
-    background: rgb(49, 53, 56);
+    background: linear-gradient(to bottom, #7ab632, #167442) !important;
 }
 
 .flipbook-color-dark {

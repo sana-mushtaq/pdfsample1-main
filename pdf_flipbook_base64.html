@@ -218,49 +218,68 @@
             });
 
     })
+    let previousUrl = null;
 
-    setInterval(function() {
-            //onPageLoad();
-            let x = currentPageClient(); // Update the value
-            let currentUrl = content[window.globalVariable[0]].title;
-        
-            window.location.hash = `p=${currentUrl}`;
-           
-        }, 1000); 
-       
-    function onPageLoad() {
+$(document).ready(function () {
+    $("#container").flipBook({
+        pdfUrl: "pdf/pdf.pdf",
+        skin: "dark",
+        icons: 'material',
+        backgroundColor: "#ddd",
+        pageRoughness: 0.5,
+        lightIntensity: 0.6,
+        lightPositionY: 400,
+        shadowOpacity: 0.1,
+        lightBox: false
+    });
 
-        const fullHash = window.location.hash;
-        
-        // Extract the last part after the last '=' character
-        const lastPart = fullHash.substring(fullHash.lastIndexOf('=') + 1);
+    onPageLoad();
+    previousUrl = content[window.globalVariable[0]].title;
 
-        let filtered = content.filter(c=>{
-            return c.title === lastPart
-        });
+    // Listen for the hashchange event
+    window.addEventListener("hashchange", onPageChange);
+});
 
-        if(filtered.length > 0) {
+function onPageChange() {
+    // Reload the page when the hash changes
+    window.location.reload();
+}
 
-            if(filtered[0].index === 0) {
+setInterval(function () {
+    let x = currentPageClient(); // Update the value
+    let currentUrl = content[window.globalVariable[0]].title;
+
+    // Check if the current URL is different from the previous one
+        window.location.hash = `p=${currentUrl}`;
+    
+
+}, 1000);
+
+function onPageLoad() {
+    console.log("loaded");
+    const fullHash = window.location.hash;
+
+    // Extract the last part after the last '=' character
+    const lastPart = fullHash.substring(fullHash.lastIndexOf('=') + 1);
+
+    let filtered = content.filter(c => {
+        return c.title === lastPart;
+    });
+
+    if (filtered.length > 0) {
+        if (filtered[0].index === 0) {
             window.globalVariable = [0];
         } else {
-           
-                window.globalVariable = [filtered[0].index, filtered[0].index+1]
-            
-
+            window.globalVariable = [filtered[0].index, filtered[0].index + 1];
             console.log(window.globalVariable);
         }
+    } else {
+        window.globalVariable = [0];
+        window.location.hash = `p=Front_cover`;
+    }
+}
 
-        } else {
-            window.globalVariable = [0];
-            window.location.hash = `p=Front_cover`;
-        }
-     
-        }
-
-        //onPageLoad();
-        document.addEventListener('DOMContentLoaded', onPageLoad);
-
+document.addEventListener('DOMContentLoaded', onPageLoad);
         
 </script>
 

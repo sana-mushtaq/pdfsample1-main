@@ -1,67 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>3D PDF Flipbook Sample</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Include jQuery and FlipBook CSS/JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
-    <script src="js/flipbook.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
 
-    <!-- Custom Styles -->
-    <style type="text/css">
-        body {
-            text-align: center;
-            font-family: "Henry Sans", sans-serif;
-            margin: 20px;
-        }
+<link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 
-        h1 {
-            font-size: 48px;
-            color: #0030ff;
-        }
+<script src="js/flipbook.min.js"></script>
 
-        p {
-            font-size: 16px;
-        }
+<script type="text/javascript">
 
-        .flipbook-container {
-            margin: 20px auto;
-        }
-    </style>
+    let content = [
+        {index: 0, title: 'Front_cover'},
+        {index: 1, title: 'Index_1'},
+        {index: 2, title: 'Index_2'},
+        {index: 3, title: 'Fertilizers'},
+        {index: 4, title: 'Agroleaf_High_N'},
+        {index: 5, title: 'Agroleaf_High_P'},
+        {index: 6, title: 'Agroleaf_High_K'},
+        {index: 7, title: 'Agroleaf_Total_20-20-20'},
+        {index: 8, title: 'H2Flow'},
+        {index: 9, title: 'Pearl_Humus_Pro'},
+        {index: 10, title: 'Pow_Humus_Pro'},
+        {index: 11, title: 'Biohealth_Myco'},
+        {index: 12, title: 'Alga600'},
+        {index: 13, title: 'SoftGuard'},
+        {index: 14, title: 'Double_Win_pro_P'},
+        {index: 15, title: 'Double_Win_pro_K'},
+        {index: 16, title: 'Omex_Calmax'},
+        {index: 17, title: 'Omex_DP'},
+        {index: 18, title: 'Omex_Nami'},
+        {index: 19, title: 'Dissolvine_Mn'},
+        {index: 20, title: 'Dissolvine_Zn'},
+        {index: 21, title: 'Dissolvine_ABC'},
+        {index: 22, title: 'Foliareal_OK'},
+        {index: 23, title: 'Foliareal_OK'},
+        {index: 24, title: 'Terra_Sorb_Radicular'},
+        {index: 25, title: 'Flower_Power'},
+        {index: 26, title: 'Nitrite_Blancer'},
+        {index: 27, title: 'ADOB_Calcium'},
+        {index: 28, title: 'ADOB_Magnesium'},
+        {index: 29, title: 'KELPAK'},
+        {index: 30, title: 'Magnesium_Sulphate'},
+        {index: 31, title: 'Ammonium_Sulphate'},
+        {index: 32, title: 'Purti_Gala_20-20-20'},
+        {index: 33, title: 'Purti_Gala_15-30-15'},
+        {index: 34, title: 'Purti_Gala_10-52-10'},
+        {index: 35, title: 'Purti_Gala_10-10-40'},
+        {index: 36, title: 'Purti_Gala_13-5-40'},
+        {index: 37, title: 'Purti_Gala_15-15-30'},
+        {index: 38, title: 'Purti_Grana_28-14-14'},
+        {index: 39, title: 'Purti_Grana_18-18-5'},
+        {index: 40, title: 'Purti_Gala_12-12-17'},
+        {index: 41, title: 'Purti_Gala_25-25-18'},
+        {index: 42, title: 'Flash_Salt'},
+        {index: 43, title: 'Radicalene'},
+        {index: 44, title: 'Pesticides'},
+        {index: 45, title: 'Ortiva_Top'},
+        {index: 46, title: 'Switch'},
+        {index: 47, title: 'Amistar_Xtra'},
+        {index: 48, title: 'Dividend_Extreme'},
+        {index: 49, title: 'Miravis_Dou'},
+        {index: 50, title: 'Voliam_Targo'},
+        {index: 51, title: 'Vertimec'},
+        {index: 52, title: 'Agremic_Gold'},
+        {index: 53, title: 'Boxer'},
+        {index: 54, title: 'Fusilade_Max'},
+        {index: 55, title: 'Touchdown'},
+        {index: 56, title: 'Rufast'},
+        {index: 57, title: 'Beltanol'},
+        {index: 58, title: 'Belthirul'},
+        {index: 59, title: 'Belthirul'},
+        {index: 60, title: 'Muligan'},
+        {index: 61, title: 'Tamfium_Pro'},
+        {index: 62, title: 'Cera_Trap'},
+        {index: 63, title: 'Surfac'},
+        {index: 64, title: 'Kosavet'},
+        {index: 65, title: 'High_Power'},
+        {index: 66, title: 'Flotron'},
+        {index: 67, title: 'Pono'},
+        {index: 68, title: 'Platon'},
+        {index: 69, title: 'Swift'},
+        {index: 70, title: 'Branchio_X'},
+        {index: 71, title: 'Apploud'},
+        {index: 72, title: 'Kruise'},
+        {index: 73, title: 'Sprinter'},
+        {index: 74, title: 'Glovostar'},
+        {index: 75, title: 'Condior'},
+        {index: 76, title: 'Real_5_SC'},
+        {index: 77, title: 'Seeds'},
+        {index: 78, title: 'Lelyana_Tomato'},
+        {index: 79, title: 'Inci_Cucumber'},
+        {index: 80, title: 'Mezna_Cucumber'},
+        {index: 81, title: 'Black_Pearl_Eggplant'},
+        {index: 82, title: 'Nour_Squash'},
+        {index: 83, title: 'Farah_Squash'},
+        {index: 84, title: 'Goal_Cucumber'},
+        {index: 85, title: 'Empair_Cucumber'},
+        {index: 86, title: 'Algawhara_Cucumber'},
+        {index: 87, title: 'Diala_Cucumber'},
+        {index: 88, title: 'Belquis_Tomato'},
+        {index: 89, title: 'Aseal_Tomato'},
+        {index: 90, title: 'Cauliflower_Milkway'},
+        {index: 91, title: 'Cauliflower_Ice_Star'},
+        {index: 92, title: 'Broccolli_Green_Star'},
+        {index: 93, title: 'Carrot_Prince'},
+        {index: 94, title: 'Papaya_Red_Lady'},
+        {index: 95, title: 'Red_Queen_Melon'},
+        {index: 96, title: 'Jade_Apple_Melon'},
+        {index: 97, title: 'SouthSea_Okra'},
+        {index: 98, title: 'Passion_Hot_Pepper'},
+        {index: 99, title: 'Temptation_Hot_Pepper'},
+        {index: 100, title: 'RedStar_Sweet_Pepper'},
+        {index: 101, title: 'Varendra_Watermelon'},
+        {index: 102, title: 'Faerie_Watermelon'},
+        {index: 103, title: 'Feeling_Watermelon'},
+        {index: 104, title: 'Brownie_Watermelon'},
+        {index: 105, title: 'Obsidian_Watermelon'},
+        {index: 106, title: 'Goldfinch_Watermelon'},
+        {index: 107, title: 'Eclipse_Watermelon'},
+        {index: 108, title: 'SweetRobin_Watermelon'},
+        {index: 109, title: 'Jupiter_Watermelon'},
+        {index: 110, title: 'Dalia_Melon'},
+        {index: 111, title: 'Zara_Melon'},
+        {index: 112, title: 'Reston_Tomato'},
+        {index: 113, title: 'Raja_Tomato'},
+        {index: 114, title: 'Rema_Tomato'},
+        {index: 115, title: 'Rotana_Squash'},
+        {index: 116, title: 'GreenRock_Sweet_Pepper'},
+        {index: 117, title: 'Kaian_Sweet_Pepper'},
+        {index: 118, title: 'Mix2_Greenfeild'},
+        {index: 119, title: 'US_JET_Alfalfa'},
+        {index: 120, title: 'Osailah_Alfalfa'},
+        {index: 121, title: 'Texas_Alfalfa'},
+        {index: 122, title: 'Indam_204'},
+        {index: 123, title: 'IPM'},
+        {index: 124, title: 'Aphipar_M'},
+        {index: 125, title: 'Ervipar'},
+        {index: 126, title: 'Aphidend'},
+        {index: 127, title: 'Miglyphus'},
+        {index: 128, title: 'Spical'},
+        {index: 129, title: 'Spidex_Vital'},
+        {index: 130, title: 'Swrski_Mite'},
+        {index: 131, title: 'Thripor_L'},
+        {index: 132, title: 'Nesibug'},
+        {index: 133, title: 'Mirical'},
+        {index: 134, title: 'Ercal'},
+        {index: 135, title: 'Mycotal'},
+        {index: 136, title: 'Chrysopa_E'},
+        {index: 137, title: 'Artefeed'},
+        {index: 138, title: 'Entofood'},
+        {index: 139, title: 'MiniAirbug'},
+        {index: 140, title: 'Natipol'},
+        {index: 141, title: 'Roller_Trap'},
+        {index: 142, title: 'Horiver'},
+        {index: 143, title: 'TutaTec'},
+        {index: 144, title: 'TotaCap_LongLife'},
+        {index: 145, title: 'Equipments_Irrigation'},
+        {index: 146, title: 'KAPPA'},
+        {index: 147, title: 'YPSILO65C'},
+        {index: 148, title: 'SEMSF13'},
+        {index: 149, title: 'IA2400'},
+        {index: 150, title: 'MC2120'},
+        {index: 151, title: 'RW5'},
+        {index: 152, title: 'LAV10'},
+        {index: 153, title: 'IRMO4'},
+        {index: 154, title: 'CELLA'},
+        {index: 155, title: 'ATC'},
+        {index: 156, title: 'ATSS'},
+        {index: 157, title: 'ATP'},
+        {index: 158, title: 'GTD2000'},
+        {index: 159, title: 'Automated-fertigation_injection-systems'},
+        {index: 160, title: 'Fertilizer-tanks-and-venturis'},
+        {index: 161, title: 'short-Plastic-manual-screen-and-disc-filters'},
+        {index: 162, title: 'long-Plastic-manual-screen-and-disc-filters'},
+        {index: 163, title: 'Twin-Disc-Filter'},
+        {index: 164, title: 'Continous-Circulation-Screen-Filter'},
+        {index: 165, title: 'Semi-Automatic-Screen-Filter'},
+        {index: 166, title: 'Electric-Activated-Automatic-Screen-Filters'},
+        {index: 167, title: 'Air-valve'},
+        {index: 168, title: 'Single-Union-PVC-Valves'},
+        {index: 169, title: 'Hydarulic-Irrigation-Control-Plastic-Valves'},
+        {index: 170, title: 'Electric-Hydarulic-Control-Metal-Valves'},
+        {index: 171, title: 'Olympos-PC/AS-Drip-Line'},
+        {index: 172, title: 'T-Tape-Reserve-Drip-Tape'},
+        {index: 173, title: 'Eolos-Classic-Drip-Line'},
+        {index: 174, title: 'Compact-Drip-Line'},
+        {index: 175, title: 'Layflat-pipe-line'},
+        {index: 176, title: '%20Micro-Tube'},
+        {index: 177, title: 'Corona-PC/PCND-Online-Dripper'},
+        {index: 178, title: 'E1000-Online-Dripper'},
+        {index: 179, title: 'FLF-Fogger'},
+        {index: 180, title: 'Rondo-Mist-Sprayer'},
+        {index: 181, title: 'S2000-PC-Micro-Sprinkler'},
+        {index: 182, title: 'Impact-Sprinklers'},
+        {index: 183, title: 'Pressure-gauge-10-bar'},
+        {index: 184, title: 'Start-Connectors'},
+        {index: 185, title: 'Barbed-Couplings'},
+        {index: 186, title: 'Barbed-elbow'}
+    ];
 
-</head>
 
-<body>
-    <h1>3D PDF Flipbook Sample</h1>
-    <p>Opening a specific PDF directly.</p>
-
-    <!-- Container for the FlipBook -->
-    <div class="flipbook-container">
-        <img id="container" width="360" src="images/book2/thumb1.jpg" />
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Initialize the FlipBook with the specific PDF
-            $("#container").flipBook({
+    $(document).ready(function () {
+        $("#container").flipBook({
                 pdfUrl: "pdf/pdf.pdf",
                 skin: "dark",
                 icons: 'material',
                 backgroundColor: "#ddd",
                 pageRoughness: 0.5,
-                lightIntensity: 0.4,
+                lightIntensity: 0.6,
                 lightPositionY: 400,
-                shadowOpacity: 0.5,
-                zoomMin: 0.8,
+                shadowOpacity: 0.1,
+                //zoomMin: 0.8,
                 lightBox: false
             });
-        });
-    </script>
 
+    })
+    let previousUrl = null;
+
+$(document).ready(function () {
+    $("#container").flipBook({
+        pdfUrl: "pdf/pdf.pdf",
+        skin: "dark",
+        icons: 'material',
+        backgroundColor: "#ddd",
+        pageRoughness: 0.5,
+        lightIntensity: 0.6,
+        lightPositionY: 400,
+        shadowOpacity: 0.1,
+        lightBox: false
+    });
+
+    onPageLoad();
+    previousUrl = content[window.globalVariable[0]].title;
+
+    // Listen for the hashchange event
+    window.addEventListener("hashchange", onPageChange);
+});
+
+function onPageChange() {
+    // Reload the page when the hash changes
+    window.location.reload();
+}
+
+setInterval(function () {
+    let x = currentPageClient(); // Update the value
+    let currentUrl = content[window.globalVariable[0]].title;
+
+    // Check if the current URL is different from the previous one
+        window.location.hash = `p=${currentUrl}`;
+    
+
+}, 1000);
+
+function onPageLoad() {
+    console.log("loaded");
+    const fullHash = window.location.hash;
+
+    // Extract the last part after the last '=' character
+    const lastPart = fullHash.substring(fullHash.lastIndexOf('=') + 1);
+
+    let filtered = content.filter(c => {
+        return c.title === lastPart;
+    });
+
+    if (filtered.length > 0) {
+        if (filtered[0].index === 0) {
+            window.globalVariable = [0];
+        } else {
+            window.globalVariable = [filtered[0].index, filtered[0].index + 1];
+            console.log(window.globalVariable);
+        }
+    } else {
+        window.globalVariable = [0];
+        window.location.hash = `p=Front_cover`;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', onPageLoad);
+        
+</script>
+
+</head>
+
+<body>
+<div id="container">
+</div>
 </body>
 
 </html>
