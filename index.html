@@ -3,280 +3,281 @@
 
 <head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
 
-<link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 
-<script src="js/flipbook.min.js"></script>
+    <script src="js/flipbook.min.js"></script>
 
-<script type="text/javascript">
+    <script type="text/javascript">
 
-    let content = [
-        {index: 0, title: 'Front_cover'},
-        {index: 1, title: 'Index_1'},
-        {index: 2, title: 'Index_2'},
-        {index: 3, title: 'Fertilizers'},
-        {index: 4, title: 'Agroleaf_High_N'},
-        {index: 5, title: 'Agroleaf_High_P'},
-        {index: 6, title: 'Agroleaf_High_K'},
-        {index: 7, title: 'Agroleaf_Total_20-20-20'},
-        {index: 8, title: 'H2Flow'},
-        {index: 9, title: 'Pearl_Humus_Pro'},
-        {index: 10, title: 'Pow_Humus_Pro'},
-        {index: 11, title: 'Biohealth_Myco'},
-        {index: 12, title: 'Alga600'},
-        {index: 13, title: 'SoftGuard'},
-        {index: 14, title: 'Double_Win_pro_P'},
-        {index: 15, title: 'Double_Win_pro_K'},
-        {index: 16, title: 'Omex_Calmax'},
-        {index: 17, title: 'Omex_DP'},
-        {index: 18, title: 'Omex_Nami'},
-        {index: 19, title: 'Dissolvine_Mn'},
-        {index: 20, title: 'Dissolvine_Zn'},
-        {index: 21, title: 'Dissolvine_ABC'},
-        {index: 22, title: 'Foliareal_OK'},
-        {index: 23, title: 'Foliareal_OK'},
-        {index: 24, title: 'Terra_Sorb_Radicular'},
-        {index: 25, title: 'Flower_Power'},
-        {index: 26, title: 'Nitrite_Blancer'},
-        {index: 27, title: 'ADOB_Calcium'},
-        {index: 28, title: 'ADOB_Magnesium'},
-        {index: 29, title: 'KELPAK'},
-        {index: 30, title: 'Magnesium_Sulphate'},
-        {index: 31, title: 'Ammonium_Sulphate'},
-        {index: 32, title: 'Purti_Gala_20-20-20'},
-        {index: 33, title: 'Purti_Gala_15-30-15'},
-        {index: 34, title: 'Purti_Gala_10-52-10'},
-        {index: 35, title: 'Purti_Gala_10-10-40'},
-        {index: 36, title: 'Purti_Gala_13-5-40'},
-        {index: 37, title: 'Purti_Gala_15-15-30'},
-        {index: 38, title: 'Purti_Grana_28-14-14'},
-        {index: 39, title: 'Purti_Grana_18-18-5'},
-        {index: 40, title: 'Purti_Gala_12-12-17'},
-        {index: 41, title: 'Purti_Gala_25-25-18'},
-        {index: 42, title: 'Flash_Salt'},
-        {index: 43, title: 'Radicalene'},
-        {index: 44, title: 'Pesticides'},
-        {index: 45, title: 'Ortiva_Top'},
-        {index: 46, title: 'Switch'},
-        {index: 47, title: 'Amistar_Xtra'},
-        {index: 48, title: 'Dividend_Extreme'},
-        {index: 49, title: 'Miravis_Dou'},
-        {index: 50, title: 'Voliam_Targo'},
-        {index: 51, title: 'Vertimec'},
-        {index: 52, title: 'Agremic_Gold'},
-        {index: 53, title: 'Boxer'},
-        {index: 54, title: 'Fusilade_Max'},
-        {index: 55, title: 'Touchdown'},
-        {index: 56, title: 'Rufast'},
-        {index: 57, title: 'Beltanol'},
-        {index: 58, title: 'Belthirul'},
-        {index: 59, title: 'Belthirul'},
-        {index: 60, title: 'Muligan'},
-        {index: 61, title: 'Tamfium_Pro'},
-        {index: 62, title: 'Cera_Trap'},
-        {index: 63, title: 'Surfac'},
-        {index: 64, title: 'Kosavet'},
-        {index: 65, title: 'High_Power'},
-        {index: 66, title: 'Flotron'},
-        {index: 67, title: 'Pono'},
-        {index: 68, title: 'Platon'},
-        {index: 69, title: 'Swift'},
-        {index: 70, title: 'Branchio_X'},
-        {index: 71, title: 'Apploud'},
-        {index: 72, title: 'Kruise'},
-        {index: 73, title: 'Sprinter'},
-        {index: 74, title: 'Glovostar'},
-        {index: 75, title: 'Condior'},
-        {index: 76, title: 'Real_5_SC'},
-        {index: 77, title: 'Seeds'},
-        {index: 78, title: 'Lelyana_Tomato'},
-        {index: 79, title: 'Inci_Cucumber'},
-        {index: 80, title: 'Mezna_Cucumber'},
-        {index: 81, title: 'Black_Pearl_Eggplant'},
-        {index: 82, title: 'Nour_Squash'},
-        {index: 83, title: 'Farah_Squash'},
-        {index: 84, title: 'Goal_Cucumber'},
-        {index: 85, title: 'Empair_Cucumber'},
-        {index: 86, title: 'Algawhara_Cucumber'},
-        {index: 87, title: 'Diala_Cucumber'},
-        {index: 88, title: 'Belquis_Tomato'},
-        {index: 89, title: 'Aseal_Tomato'},
-        {index: 90, title: 'Cauliflower_Milkway'},
-        {index: 91, title: 'Cauliflower_Ice_Star'},
-        {index: 92, title: 'Broccolli_Green_Star'},
-        {index: 93, title: 'Carrot_Prince'},
-        {index: 94, title: 'Papaya_Red_Lady'},
-        {index: 95, title: 'Red_Queen_Melon'},
-        {index: 96, title: 'Jade_Apple_Melon'},
-        {index: 97, title: 'SouthSea_Okra'},
-        {index: 98, title: 'Passion_Hot_Pepper'},
-        {index: 99, title: 'Temptation_Hot_Pepper'},
-        {index: 100, title: 'RedStar_Sweet_Pepper'},
-        {index: 101, title: 'Varendra_Watermelon'},
-        {index: 102, title: 'Faerie_Watermelon'},
-        {index: 103, title: 'Feeling_Watermelon'},
-        {index: 104, title: 'Brownie_Watermelon'},
-        {index: 105, title: 'Obsidian_Watermelon'},
-        {index: 106, title: 'Goldfinch_Watermelon'},
-        {index: 107, title: 'Eclipse_Watermelon'},
-        {index: 108, title: 'SweetRobin_Watermelon'},
-        {index: 109, title: 'Jupiter_Watermelon'},
-        {index: 110, title: 'Dalia_Melon'},
-        {index: 111, title: 'Zara_Melon'},
-        {index: 112, title: 'Reston_Tomato'},
-        {index: 113, title: 'Raja_Tomato'},
-        {index: 114, title: 'Rema_Tomato'},
-        {index: 115, title: 'Rotana_Squash'},
-        {index: 116, title: 'GreenRock_Sweet_Pepper'},
-        {index: 117, title: 'Kaian_Sweet_Pepper'},
-        {index: 118, title: 'Mix2_Greenfeild'},
-        {index: 119, title: 'US_JET_Alfalfa'},
-        {index: 120, title: 'Osailah_Alfalfa'},
-        {index: 121, title: 'Texas_Alfalfa'},
-        {index: 122, title: 'Indam_204'},
-        {index: 123, title: 'IPM'},
-        {index: 124, title: 'Aphipar_M'},
-        {index: 125, title: 'Ervipar'},
-        {index: 126, title: 'Aphidend'},
-        {index: 127, title: 'Miglyphus'},
-        {index: 128, title: 'Spical'},
-        {index: 129, title: 'Spidex_Vital'},
-        {index: 130, title: 'Swrski_Mite'},
-        {index: 131, title: 'Thripor_L'},
-        {index: 132, title: 'Nesibug'},
-        {index: 133, title: 'Mirical'},
-        {index: 134, title: 'Ercal'},
-        {index: 135, title: 'Mycotal'},
-        {index: 136, title: 'Chrysopa_E'},
-        {index: 137, title: 'Artefeed'},
-        {index: 138, title: 'Entofood'},
-        {index: 139, title: 'MiniAirbug'},
-        {index: 140, title: 'Natipol'},
-        {index: 141, title: 'Roller_Trap'},
-        {index: 142, title: 'Horiver'},
-        {index: 143, title: 'TutaTec'},
-        {index: 144, title: 'TotaCap_LongLife'},
-        {index: 145, title: 'Equipments_Irrigation'},
-        {index: 146, title: 'KAPPA'},
-        {index: 147, title: 'YPSILO65C'},
-        {index: 148, title: 'SEMSF13'},
-        {index: 149, title: 'IA2400'},
-        {index: 150, title: 'MC2120'},
-        {index: 151, title: 'RW5'},
-        {index: 152, title: 'LAV10'},
-        {index: 153, title: 'IRMO4'},
-        {index: 154, title: 'CELLA'},
-        {index: 155, title: 'ATC'},
-        {index: 156, title: 'ATSS'},
-        {index: 157, title: 'ATP'},
-        {index: 158, title: 'GTD2000'},
-        {index: 159, title: 'Automated-fertigation_injection-systems'},
-        {index: 160, title: 'Fertilizer-tanks-and-venturis'},
-        {index: 161, title: 'short-Plastic-manual-screen-and-disc-filters'},
-        {index: 162, title: 'long-Plastic-manual-screen-and-disc-filters'},
-        {index: 163, title: 'Twin-Disc-Filter'},
-        {index: 164, title: 'Continous-Circulation-Screen-Filter'},
-        {index: 165, title: 'Semi-Automatic-Screen-Filter'},
-        {index: 166, title: 'Electric-Activated-Automatic-Screen-Filters'},
-        {index: 167, title: 'Air-valve'},
-        {index: 168, title: 'Single-Union-PVC-Valves'},
-        {index: 169, title: 'Hydarulic-Irrigation-Control-Plastic-Valves'},
-        {index: 170, title: 'Electric-Hydarulic-Control-Metal-Valves'},
-        {index: 171, title: 'Olympos-PC/AS-Drip-Line'},
-        {index: 172, title: 'T-Tape-Reserve-Drip-Tape'},
-        {index: 173, title: 'Eolos-Classic-Drip-Line'},
-        {index: 174, title: 'Compact-Drip-Line'},
-        {index: 175, title: 'Layflat-pipe-line'},
-        {index: 176, title: '%20Micro-Tube'},
-        {index: 177, title: 'Corona-PC/PCND-Online-Dripper'},
-        {index: 178, title: 'E1000-Online-Dripper'},
-        {index: 179, title: 'FLF-Fogger'},
-        {index: 180, title: 'Rondo-Mist-Sprayer'},
-        {index: 181, title: 'S2000-PC-Micro-Sprinkler'},
-        {index: 182, title: 'Impact-Sprinklers'},
-        {index: 183, title: 'Pressure-gauge-10-bar'},
-        {index: 184, title: 'Start-Connectors'},
-        {index: 185, title: 'Barbed-Couplings'},
-        {index: 186, title: 'Barbed-elbow'}
-    ];
+        let content = [
+            { index: 0, title: 'Front_cover' },
+            { index: 1, title: 'Index_1' },
+            { index: 2, title: 'Index_2' },
+            { index: 3, title: 'Fertilizers' },
+            { index: 4, title: 'Agroleaf_High_N' },
+            { index: 5, title: 'Agroleaf_High_P' },
+            { index: 6, title: 'Agroleaf_High_K' },
+            { index: 7, title: 'Agroleaf_Total_20-20-20' },
+            { index: 8, title: 'H2Flow' },
+            { index: 9, title: 'Pearl_Humus_Pro' },
+            { index: 10, title: 'Pow_Humus_Pro' },
+            { index: 11, title: 'Biohealth_Myco' },
+            { index: 12, title: 'Alga600' },
+            { index: 13, title: 'SoftGuard' },
+            { index: 14, title: 'Double_Win_pro_P' },
+            { index: 15, title: 'Double_Win_pro_K' },
+            { index: 16, title: 'Omex_Calmax' },
+            { index: 17, title: 'Omex_DP' },
+            { index: 18, title: 'Omex_Nami' },
+            { index: 19, title: 'Dissolvine_Mn' },
+            { index: 20, title: 'Dissolvine_Zn' },
+            { index: 21, title: 'Dissolvine_ABC' },
+            { index: 22, title: 'Foliareal_OK' },
+            { index: 23, title: 'Foliareal_OK' },
+            { index: 24, title: 'Terra_Sorb_Radicular' },
+            { index: 25, title: 'Flower_Power' },
+            { index: 26, title: 'Nitrite_Blancer' },
+            { index: 27, title: 'ADOB_Calcium' },
+            { index: 28, title: 'ADOB_Magnesium' },
+            { index: 29, title: 'KELPAK' },
+            { index: 30, title: 'Magnesium_Sulphate' },
+            { index: 31, title: 'Ammonium_Sulphate' },
+            { index: 32, title: 'Purti_Gala_20-20-20' },
+            { index: 33, title: 'Purti_Gala_15-30-15' },
+            { index: 34, title: 'Purti_Gala_10-52-10' },
+            { index: 35, title: 'Purti_Gala_10-10-40' },
+            { index: 36, title: 'Purti_Gala_13-5-40' },
+            { index: 37, title: 'Purti_Gala_15-15-30' },
+            { index: 38, title: 'Purti_Grana_28-14-14' },
+            { index: 39, title: 'Purti_Grana_18-18-5' },
+            { index: 40, title: 'Purti_Gala_12-12-17' },
+            { index: 41, title: 'Purti_Gala_25-25-18' },
+            { index: 42, title: 'Flash_Salt' },
+            { index: 43, title: 'Radicalene' },
+            { index: 44, title: 'Pesticides' },
+            { index: 45, title: 'Ortiva_Top' },
+            { index: 46, title: 'Switch' },
+            { index: 47, title: 'Amistar_Xtra' },
+            { index: 48, title: 'Dividend_Extreme' },
+            { index: 49, title: 'Miravis_Dou' },
+            { index: 50, title: 'Voliam_Targo' },
+            { index: 51, title: 'Vertimec' },
+            { index: 52, title: 'Agremic_Gold' },
+            { index: 53, title: 'Boxer' },
+            { index: 54, title: 'Fusilade_Max' },
+            { index: 55, title: 'Touchdown' },
+            { index: 56, title: 'Rufast' },
+            { index: 57, title: 'Beltanol' },
+            { index: 58, title: 'Belthirul' },
+            { index: 59, title: 'Belthirul' },
+            { index: 60, title: 'Muligan' },
+            { index: 61, title: 'Tamfium_Pro' },
+            { index: 62, title: 'Cera_Trap' },
+            { index: 63, title: 'Surfac' },
+            { index: 64, title: 'Kosavet' },
+            { index: 65, title: 'High_Power' },
+            { index: 66, title: 'Flotron' },
+            { index: 67, title: 'Pono' },
+            { index: 68, title: 'Platon' },
+            { index: 69, title: 'Swift' },
+            { index: 70, title: 'Branchio_X' },
+            { index: 71, title: 'Apploud' },
+            { index: 72, title: 'Kruise' },
+            { index: 73, title: 'Sprinter' },
+            { index: 74, title: 'Glovostar' },
+            { index: 75, title: 'Condior' },
+            { index: 76, title: 'Real_5_SC' },
+            { index: 77, title: 'Seeds' },
+            { index: 78, title: 'Lelyana_Tomato' },
+            { index: 79, title: 'Inci_Cucumber' },
+            { index: 80, title: 'Mezna_Cucumber' },
+            { index: 81, title: 'Black_Pearl_Eggplant' },
+            { index: 82, title: 'Nour_Squash' },
+            { index: 83, title: 'Farah_Squash' },
+            { index: 84, title: 'Goal_Cucumber' },
+            { index: 85, title: 'Empair_Cucumber' },
+            { index: 86, title: 'Algawhara_Cucumber' },
+            { index: 87, title: 'Diala_Cucumber' },
+            { index: 88, title: 'Belquis_Tomato' },
+            { index: 89, title: 'Aseal_Tomato' },
+            { index: 90, title: 'Cauliflower_Milkway' },
+            { index: 91, title: 'Cauliflower_Ice_Star' },
+            { index: 92, title: 'Broccolli_Green_Star' },
+            { index: 93, title: 'Carrot_Prince' },
+            { index: 94, title: 'Papaya_Red_Lady' },
+            { index: 95, title: 'Red_Queen_Melon' },
+            { index: 96, title: 'Jade_Apple_Melon' },
+            { index: 97, title: 'SouthSea_Okra' },
+            { index: 98, title: 'Passion_Hot_Pepper' },
+            { index: 99, title: 'Temptation_Hot_Pepper' },
+            { index: 100, title: 'RedStar_Sweet_Pepper' },
+            { index: 101, title: 'Varendra_Watermelon' },
+            { index: 102, title: 'Faerie_Watermelon' },
+            { index: 103, title: 'Feeling_Watermelon' },
+            { index: 104, title: 'Brownie_Watermelon' },
+            { index: 105, title: 'Obsidian_Watermelon' },
+            { index: 106, title: 'Goldfinch_Watermelon' },
+            { index: 107, title: 'Eclipse_Watermelon' },
+            { index: 108, title: 'SweetRobin_Watermelon' },
+            { index: 109, title: 'Jupiter_Watermelon' },
+            { index: 110, title: 'Dalia_Melon' },
+            { index: 111, title: 'Zara_Melon' },
+            { index: 112, title: 'Reston_Tomato' },
+            { index: 113, title: 'Raja_Tomato' },
+            { index: 114, title: 'Rema_Tomato' },
+            { index: 115, title: 'Rotana_Squash' },
+            { index: 116, title: 'GreenRock_Sweet_Pepper' },
+            { index: 117, title: 'Kaian_Sweet_Pepper' },
+            { index: 118, title: 'Mix2_Greenfeild' },
+            { index: 119, title: 'US_JET_Alfalfa' },
+            { index: 120, title: 'Osailah_Alfalfa' },
+            { index: 121, title: 'Texas_Alfalfa' },
+            { index: 122, title: 'Indam_204' },
+            { index: 123, title: 'IPM' },
+            { index: 124, title: 'Aphipar_M' },
+            { index: 125, title: 'Ervipar' },
+            { index: 126, title: 'Aphidend' },
+            { index: 127, title: 'Miglyphus' },
+            { index: 128, title: 'Spical' },
+            { index: 129, title: 'Spidex_Vital' },
+            { index: 130, title: 'Swrski_Mite' },
+            { index: 131, title: 'Thripor_L' },
+            { index: 132, title: 'Nesibug' },
+            { index: 133, title: 'Mirical' },
+            { index: 134, title: 'Ercal' },
+            { index: 135, title: 'Mycotal' },
+            { index: 136, title: 'Chrysopa_E' },
+            { index: 137, title: 'Artefeed' },
+            { index: 138, title: 'Entofood' },
+            { index: 139, title: 'MiniAirbug' },
+            { index: 140, title: 'Natipol' },
+            { index: 141, title: 'Roller_Trap' },
+            { index: 142, title: 'Horiver' },
+            { index: 143, title: 'TutaTec' },
+            { index: 144, title: 'TotaCap_LongLife' },
+            { index: 145, title: 'Equipments_Irrigation' },
+            { index: 146, title: 'KAPPA' },
+            { index: 147, title: 'YPSILO65C' },
+            { index: 148, title: 'SEMSF13' },
+            { index: 149, title: 'IA2400' },
+            { index: 150, title: 'MC2120' },
+            { index: 151, title: 'RW5' },
+            { index: 152, title: 'LAV10' },
+            { index: 153, title: 'IRMO4' },
+            { index: 154, title: 'CELLA' },
+            { index: 155, title: 'ATC' },
+            { index: 156, title: 'ATSS' },
+            { index: 157, title: 'ATP' },
+            { index: 158, title: 'GTD2000' },
+            { index: 159, title: 'Automated-fertigation_injection-systems' },
+            { index: 160, title: 'Fertilizer-tanks-and-venturis' },
+            { index: 161, title: 'short-Plastic-manual-screen-and-disc-filters' },
+            { index: 162, title: 'long-Plastic-manual-screen-and-disc-filters' },
+            { index: 163, title: 'Twin-Disc-Filter' },
+            { index: 164, title: 'Continous-Circulation-Screen-Filter' },
+            { index: 165, title: 'Semi-Automatic-Screen-Filter' },
+            { index: 166, title: 'Electric-Activated-Automatic-Screen-Filters' },
+            { index: 167, title: 'Air-valve' },
+            { index: 168, title: 'Single-Union-PVC-Valves' },
+            { index: 169, title: 'Hydarulic-Irrigation-Control-Plastic-Valves' },
+            { index: 170, title: 'Electric-Hydarulic-Control-Metal-Valves' },
+            { index: 171, title: 'Olympos-PC/AS-Drip-Line' },
+            { index: 172, title: 'T-Tape-Reserve-Drip-Tape' },
+            { index: 173, title: 'Eolos-Classic-Drip-Line' },
+            { index: 174, title: 'Compact-Drip-Line' },
+            { index: 175, title: 'Layflat-pipe-line' },
+            { index: 176, title: '%20Micro-Tube' },
+            { index: 177, title: 'Corona-PC/PCND-Online-Dripper' },
+            { index: 178, title: 'E1000-Online-Dripper' },
+            { index: 179, title: 'FLF-Fogger' },
+            { index: 180, title: 'Rondo-Mist-Sprayer' },
+            { index: 181, title: 'S2000-PC-Micro-Sprinkler' },
+            { index: 182, title: 'Impact-Sprinklers' },
+            { index: 183, title: 'Pressure-gauge-10-bar' },
+            { index: 184, title: 'Start-Connectors' },
+            { index: 185, title: 'Barbed-Couplings' },
+            { index: 186, title: 'Barbed-elbow' }
+        ];
 
-    let previousUrl = null;
+        let previousUrl = null;
 
-$(document).ready(function () {
-    $("#container").flipBook({
-        pdfUrl: "pdf/pdf.pdf",
-        skin: "dark",
-        icons: 'material',
-        backgroundColor: "transparent",
-        pageRoughness: 0.5,
-        lightIntensity: 0.6,
-        lightPositionY: 400,
-        shadowOpacity: 0.1,
-        lightBox: false
-    });
+        $(document).ready(function () {
+            $("#container").flipBook({
+                pdfUrl: "pdf/pdf.pdf",
+                skin: "dark",
+                icons: 'material',
+                backgroundColor: "transparent",
+                pageRoughness: 0.5,
+                lightIntensity: 0.6,
+                lightPositionY: 400,
+                shadowOpacity: 0.1,
+                lightBox: false
+            });
 
-    onPageLoad();
-    previousUrl = content[window.globalVariable[0]].title;
+            onPageLoad();
+            previousUrl = content[window.globalVariable[0]].title;
 
-    // Listen for the hashchange event
-    window.addEventListener("hashchange", onPageChange);
-});
+            // Listen for the hashchange event
+            window.addEventListener("hashchange", onPageChange);
+        });
 
-function onPageChange() {
-    // Reload the page when the hash changes
-    window.location.reload();
-}
-
-setInterval(function () {
-    let x = currentPageClient(); // Update the value
-    let currentUrl = content[window.globalVariable[0]].title;
-
-    // Check if the current URL is different from the previous one
-        window.location.hash = `p=${currentUrl}`;
-    
-
-}, 1000);
-
-function onPageLoad() {
-    console.log("loaded");
-    const fullHash = window.location.hash;
-
-    // Extract the last part after the last '=' character
-    const lastPart = fullHash.substring(fullHash.lastIndexOf('=') + 1);
-
-    let filtered = content.filter(c => {
-        return c.title === lastPart;
-    });
-
-    if (filtered.length > 0) {
-        if (filtered[0].index === 0) {
-            window.globalVariable = [0];
-        } else {
-            window.globalVariable = [filtered[0].index, filtered[0].index + 1];
-            console.log(window.globalVariable);
+        function onPageChange() {
+            // Reload the page when the hash changes
+            window.location.reload();
         }
-    } else {
-        window.globalVariable = [0];
-        window.location.hash = `p=Front_cover`;
-    }
-}
 
-document.addEventListener('DOMContentLoaded', onPageLoad);
-        
-</script>
+        setInterval(function () {
+            let x = currentPageClient(); // Update the value
+            let currentUrl = content[window.globalVariable[0]].title;
 
-<style>
-    body{margin: 0px;}
-    video {
-  object-fit: cover;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-</style>
+            // Check if the current URL is different from the previous one
+            window.location.hash = `p=${currentUrl}`;
+
+
+        }, 1000);
+
+        function onPageLoad() {
+            const fullHash = window.location.hash;
+
+            // Extract the last part after the last '=' character
+            const lastPart = fullHash.substring(fullHash.lastIndexOf('=') + 1);
+
+            let filtered = content.filter(c => {
+                return c.title === lastPart;
+            });
+
+            if (filtered.length > 0) {
+                if (filtered[0].index === 0) {
+                    window.globalVariable = [0];
+                } else {
+                    window.globalVariable = [filtered[0].index, filtered[0].index + 1];
+                }
+            } else {
+                window.globalVariable = [0];
+                window.location.hash = `p=Front_cover`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', onPageLoad);
+
+    </script>
+
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        video {
+            object-fit: cover;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
 </head>
 
 <body>
@@ -285,136 +286,419 @@ document.addEventListener('DOMContentLoaded', onPageLoad);
     </video>-->
     <div id="container">
     </div>
+
+    <div class="glass-bg gb-overlay" id="overlay" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; padding: 0;">
+
     <div id="shareContainer" class="flipbook-sub-menu-content">
         <span class="closeButton" onclick="closeShareContainer()">&times;</span>
         <div class="auto-flex-start-center-gap10-column padding-10">
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg" onclick="openURLInApp('facebook')">
 
-                <img src="images/facebook.svg" class="social-icon "/>
+                <img src="images/facebook.svg" class="social-icon " />
                 <p>facebook</p>
 
             </div>
 
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg"  onclick="openURLInApp('whatsapp')">
 
-                <img src="images/whatsapp.svg" class="social-icon"/>
+                <img src="images/whatsapp.svg" class="social-icon" />
                 <p>whatsapp</p>
 
             </div>
 
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg"  onclick="openURLInApp('x')">
 
-                <img src="images/twitter.svg" class="social-icon"/>
+                <img src="images/twitter.svg" class="social-icon" />
                 <p>X</p>
 
             </div>
 
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg" onclick="openURLInApp('linkedin')">
 
-                <img src="images/linkedin.svg" class="social-icon"/>
+                <img src="images/linkedin.svg" class="social-icon" />
                 <p>linkedin</p>
 
             </div>
 
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg" onclick="openURLInApp('mail')">
 
-                <img src="images/facebook.svg" class="social-icon"/>
-                <p>facebook</p>
-
-            </div>
-            <div class="auto-flex-start-gap10 glass-bg">
-
-                <img src="images/mail.svg" class="social-icon"/>
+                <img src="images/mail.svg" class="social-icon" />
                 <p>mail</p>
 
             </div>
 
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg" onclick="openURLInApp('reddit')">
 
-                <img src="images/reddit.svg" class="social-icon"/>
+                <img src="images/reddit.svg" class="social-icon" />
                 <p>reddit</p>
 
             </div>
 
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg" onclick="openURLInApp('digg')">
 
-                <img src="images/digg.svg" class="social-icon"/>
+                <img src="images/digg.svg" class="social-icon" />
                 <p>digg</p>
 
             </div>
 
-            <div class="auto-flex-start-gap10 glass-bg">
+            <div class="auto-flex-start-gap10 glass-bg" onclick="openURLInApp('image')">
 
-                <img src="images/poster.svg" class="social-icon"/>
+                <img src="images/poster.svg" class="social-icon" />
                 <p>image</p>
 
             </div>
 
         </div>
 
+        <!-- Checkbox and Label in first row -->
+        <div class="auto-flex-start-gap10 glass-bg"
+            style="display: flex; align-items: center; padding: 5px; margin-bottom: 10px;">
+            <label for="copyWholeURLCheckbox">الصفحه الحاليه</label>
+            <input type="checkbox" id="copyWholeURLCheckbox">
+        </div>
+
+        <!-- Input field and Copy button in second row -->
+        <div class="auto-flex-start-gap10 glass-bg" style="display: flex; align-items: center; padding: 5px; margin-bottom: 10px;">
+
+            <button onclick="copyURL()" style="padding: 5px;
+                    background: #7ab542;
+                    border: none;
+                    color: white;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    border-radius: 10px;">ينسخ</button>
+            <input type="text" id="urlInputField" style="background: transparent;
+                     border: none;
+                     color: white;">
+        </div>
+
+        <div class="auto-flex-start-gap10 glass-bg" style="display: flex; align-items: center; padding: 5px;">
+            <div id="qrCodeContainer"></div>
+        </div>
+
     </div>
+
+   <!-- Popup container for the poster image -->
+    <div id="posterPopup" class="popup-container" style="display: none;">
+        <div class="popup-content">
+            <div class="button-container glass-bg">
+                <button class="downloadButton topLeft" onclick="downloadPoster()">Download</button>
+                <span class="closeButton topRight" onclick="closePosterPopup()">&times;</span>
+            </div>
+            <img id="posterImage" class="poster-img" src="images/front_cover.png" alt="Front Cover Image">
+            <div id="posterQRCodeContainer" class="qrCodeContainer bottomRight"></div>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/qrcode.min.js"></script>
+
 </body>
 <style>
+    .gb-overlay{display: none;}
+   .button-container {
+    position: absolute; /* Position the container absolutely */
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    left: 10px;;
+    padding: 10px;
+    min-height: 50px; /* Adjust the minimum height as needed */
+    background: rgba(255, 255, 255, 0.2); /* Apply a glass-like background */
+    border-radius: 8px; /* Add rounded corners */
+    backdrop-filter: blur(5px); /* Apply a slight blur effect to the background */
+    z-index: 1; /* Ensure the container appears above other elements */
+}
+.button-container .closeButton{    
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+.downloadButton {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
     .auto-flex-start-center-gap10-column {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        flex-direction: column; /* Remove this line, as it's not needed */
+        flex-direction: column;
+        /* Remove this line, as it's not needed */
         padding: 10px;
+        width: 100%;
+        margin-left: -7px
     }
 
     .glass-bg {
-        background: rgba(255, 255, 255, 0.2); /* Apply a glass-like background */
-        border-radius: 8px; /* Add rounded corners */
-        backdrop-filter: blur(5px); /* Apply a slight blur effect to the background */
-        padding: 0px; /* Add padding to the glass background */
-    }
-    .social-icon{
-        width:25px;
+        background: rgba(255, 255, 255, 0.2);
+        /* Apply a glass-like background */
+        border-radius: 8px;
+        /* Add rounded corners */
+        backdrop-filter: blur(5px);
+        /* Apply a slight blur effect to the background */
+        padding: 0px;
+        /* Add padding to the glass background */
+        cursor: pointer;
     }
 
-    .auto-flex-start-gap10{
-        display: flex; /* Use flexbox layout */
-        align-items: center; /* Align items to the start of the cross axis */
-        justify-content: center; /* Center items along the main axis */
-        gap: 10px; /* Add a gap of 10px between child elements */
+    .social-icon {
+        width: 25px;
+    }
+
+    .auto-flex-start-gap10 {
+        display: flex;
+        /* Use flexbox layout */
+        align-items: center;
+        /* Align items to the start of the cross axis */
+        justify-content: center;
+        /* Center items along the main axis */
+        gap: 10px;
+        /* Add a gap of 10px between child elements */
         width: 100%;
         border-radius: 10px;
         border: 1px solid;
     }
+
     #shareContainer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(122, 182, 50);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    display: none;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(122, 182, 50);
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        display: none;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
 
-#shareContainer.active {
-    display: block;
-    opacity: 1;
-}
+    #shareContainer.active {
+        display: block;
+        opacity: 1;
+    }
 
-.closeButton {
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    font-size: 20px;
-}
+    .closeButton {
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        /* Remove underline */
 
-/* Optional: Style the close button on hover */
-.closeButton:hover {
-    text-decoration: underline;
-}
+    }
+
+    /* Optional: Style the close button on hover */
+    .closeButton:hover {
+        text-decoration: none;
+    }
+
+    .popup-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
+
+    .popup-content {
+        background-color: rgb(122, 182, 50);
+        position: relative;
+        padding: 20px;
+    }
+
+    .closeButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .downloadButton {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .qrCodeContainer {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        height: 100px;
+        width: 100px;
+    }
+
+    .poster-img {
+        width: 400px;
+        height: 600px;
+    }
+
+    .qrCodeContainer img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+    }
+
+    #qrCodeContainer img {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+    }
+
+    .flipbook-sub-menu-content {
+        min-width: 300px;
+    }
 </style>
+<script>
+    // Function to close the share container
+    function closeShareContainer() {
+        var shareContainer = document.getElementById("shareContainer");
+        shareContainer.style.display = "none";
+
+        var glassBg = document.getElementById("overlay");
+        glassBg.style.display = "none";
+    }
+
+    // Function to open the current page URL in the respective app
+    function openURLInApp(appName) {
+        var currentURL = window.location.origin;
+
+        var appURL;
+
+        // Define the URLs for each app
+        switch (appName) {
+            case "facebook":
+                appURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentURL);
+                window.open(appURL, "_blank");
+                break;
+            case "whatsapp":
+                appURL = "https://api.whatsapp.com/send?text=" + encodeURIComponent(currentURL);
+                window.open(appURL, "_blank");
+                break;
+            case "x":
+                appURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(currentURL);
+                window.open(appURL, "_blank");
+                break;
+            case "linkedin":
+                appURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(currentURL);
+                window.open(appURL, "_blank");
+                break;
+            case "mail":
+                appURL = "mailto:?body=" + encodeURIComponent(currentURL);
+                window.open(appURL, "_blank");
+                break;
+            case "reddit":
+                appURL = "https://www.reddit.com/submit?url=" + encodeURIComponent(currentURL);
+                window.open(appURL, "_blank");
+                break;
+            case "digg":
+                appURL = "http://digg.com/submit?url=" + encodeURIComponent(currentURL);
+                window.open(appURL, "_blank");
+                break;
+            case "image":
+                showPosterPopup();
+                break;
+            default:
+                console.log("Invalid app name");
+                return;
+        }
+
+    }
+
+    // Function to generate QR code
+    function generateQRCode(text, containerId) {
+        var qrCodeContainer = document.getElementById(containerId);
+        qrCodeContainer.innerHTML = ""; // Clear previous QR code
+
+        var qrCode = new QRCode(qrCodeContainer, {
+            text: text,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H // High error correction level
+        });
+    }
+
+    // Function to copy URL
+    function copyURL() {
+        var urlInputField = document.getElementById("urlInputField");
+        urlInputField.select();
+        document.execCommand("copy");
+    }
+
+    // Function to update input field and QR code based on checkbox status
+    function updateInputFieldAndQRCode() {
+        var currentURL = window.location.href;
+        var urlInputField = document.getElementById("urlInputField");
+        var copyWholeURLCheckbox = document.getElementById("copyWholeURLCheckbox");
+
+        if (copyWholeURLCheckbox.checked) {
+            urlInputField.value = currentURL;
+            generateQRCode(currentURL, "qrCodeContainer");
+        } else {
+            var origin = window.location.origin;
+            urlInputField.value = origin;
+            generateQRCode(origin, "qrCodeContainer");
+        }
+    }
+
+    // Add event listener to checkbox
+    document.getElementById("copyWholeURLCheckbox").addEventListener("change", updateInputFieldAndQRCode);
+
+    // Update input field and QR code initially
+    updateInputFieldAndQRCode();
+    // Add event listener to checkbox
+    document.getElementById("copyWholeURLCheckbox").addEventListener("change", updateInputFieldAndQRCode);
+
+    // Update input field and QR code initially
+    // Function to show the poster popup
+    function showPosterPopup() {
+        var posterPopup = document.getElementById("posterPopup");
+        posterPopup.style.display = "block";
+
+        // Generate QR code for current URL or origin based on checkbox status
+        updatePosterQRCode();
+    }
+
+    // Function to close the poster popup
+    function closePosterPopup() {
+        var posterPopup = document.getElementById("posterPopup");
+        posterPopup.style.display = "none";
+    }
+
+    // Function to download the poster image
+    function downloadPoster() {
+        var posterImage = document.getElementById("posterImage");
+        var downloadLink = document.createElement("a");
+        downloadLink.href = posterImage.src;
+        downloadLink.download = "front_cover.png";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
+
+    // Function to generate QR code for the current URL or origin based on checkbox status
+    function updatePosterQRCode() {
+        var currentURL = document.getElementById("copyWholeURLCheckbox").checked ? window.location.href : window.location.origin;
+        var qrCodeContainer = document.getElementById("posterQRCodeContainer");
+        qrCodeContainer.innerHTML = "";
+        new QRCode(qrCodeContainer, currentURL);
+    }
+
+</script>
+
 </html>
