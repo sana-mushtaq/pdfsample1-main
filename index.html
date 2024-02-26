@@ -219,17 +219,18 @@
 
             onPageLoad();
             previousUrl = content[window.globalVariable[0]].title;
-
+            console.log(previousUrl);
             // Listen for the hashchange event
             window.addEventListener("hashchange", onPageChange);
         });
 
         function onPageChange() {
             // Reload the page when the hash changes
-            window.location.reload();
+          //  window.location.reload();
         }
 
         setInterval(function () {
+            previousUrl = content[window.globalVariable[0]].title;
             let x = currentPageClient(); // Update the value
             let currentUrl = content[window.globalVariable[0]].title;
 
